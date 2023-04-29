@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasopharyngeal</title>
+    <link rel="stylesheet" href="../static/css/nasopharyngeal.css">
+    
+
+</head>
+<body>
+
+    <h1 id="main_heading">Nasopharyngeal Cancer Prediction</h1>
+
+    <form action="{{url_for('predict')}}" method="post" id="form">
+    <div>
+        <label class="form_head">Age</label> <br> <br>
+        <input type="text" name="age" id="age_input" placeholder="Enter Your Age"> <br> <br>
+
+        <label style="font-size: 20px; ">Select Your Gender</label> <br>
+        <select name="gender" id="gender">
+         <option value="1">Female</option>
+         <option value="2">Male</option>
+
+        </select> <br><br>
+
+        <label class="form_head">Air Pollution</label> <br> <br>
+        <input type="text" name="air_polution_input" id="air_polution_input" placeholder="Number between 1 to 10"> <br> <br> <br>
+
+        <label class="form_head">Alcohol Use</label> <br> <br>
+        <input type="text" name="alcohol_use_input" id="alcohol_use_input" placeholder="Number between 1 to 10"> <br> <br> <br>
+
+        <label class="form_head">Smoking</label> <br> <br>
+        <input type="text" name="smoking_input" id="smoking_input" placeholder="Number between 1 to 10"> <br> <br> <br>
+
+        <label class="form_head">Passive Smoker</label> <br> <br>
+        <input type="text" name="passive_smoker_input" id="passive_smoker_input" placeholder="Number between 1 to 10"> <br> <br> <br>
+
+        <label class="form_head">Frequent Cold</label> <br> <br>
+        <input type="text" name="frequent_cold_input" id="frequent_cold_input" placeholder="Number between 1 to 10"> <br> <br> <br>
+
+        <label class="form_head">Dry Cough</label> <br> <br>
+        <input type="text" name="dry_cough_input" id="dry_cough_input" placeholder="Number between 1 to 10"> <br> <br> <br>
+
+        <label class="form_head">Snoring</label> <br> <br>
+        <input type="text" name="snoring_input" id="snoring_input" placeholder="Number between 1 to 10"> <br> <br>
+    </div>
+         
+         <input type="submit" name="result" id="result" value="Result">
+
+
+    </form>
+
+    <h1 id="prediction">{{prediction}}</h1>
+
+
+    
+</body>
+</html>
